@@ -123,6 +123,11 @@ app.use((error, req, res, next) => {
 
 const PORT = process.env.PORT || 4000;
 
+console.log('Mongo URL:', MONGO);
+
+
+
+
 mongoose
   .connect(MONGO, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
